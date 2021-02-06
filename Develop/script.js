@@ -8,7 +8,10 @@ function writePassword() {
 
   passwordText.value = password;
 
-  window.alert("your password is "+passwordText.value);
+  if(password!="Your Secure Password"){
+    window.alert("your password is "+passwordText.value);
+
+  }
 
 }
 
@@ -65,7 +68,8 @@ function generatePassword(){
 
   }
   if(types.length==0){
-    return;
+    window.alert("You didn't pick anything!");
+    return "Your Secure Password";
   }
 
   var returnString="";
